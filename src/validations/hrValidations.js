@@ -1,0 +1,58 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VAddEmployee = void 0;
+const joi_1 = __importDefault(require("joi"));
+exports.VAddEmployee = joi_1.default.object({
+    employeeId: joi_1.default.number().integer().required(),
+    firstName: joi_1.default.string().required(),
+    middleName: joi_1.default.string().optional(),
+    lastName: joi_1.default.string().optional(),
+    companyEmail: joi_1.default.string().required(),
+    employeeTypeId: joi_1.default.number().integer().required(),
+    businessUnitId: joi_1.default.number().integer().required(),
+    designationId: joi_1.default.number().integer().required(),
+    managerId: joi_1.default.number().integer(),
+    personalEmail: joi_1.default.string().optional(),
+    mobileNumber: joi_1.default.string().optional(),
+    alternateNumber: joi_1.default.string().optional(),
+    gender: joi_1.default.number().integer().optional(),
+    bloodGroup: joi_1.default.string().optional().allow(null),
+    birthDate: joi_1.default.date().optional(),
+    height: joi_1.default.number().optional(),
+    weight: joi_1.default.number().optional(),
+    aadharNumber: joi_1.default.string().optional(),
+    passportNumber: joi_1.default.string().optional(),
+    passportValidity: joi_1.default.date().optional(),
+    panCardNumber: joi_1.default.string().optional(),
+    currentAddress: joi_1.default.string().optional(),
+    permanentAddress: joi_1.default.string().optional().allow(null),
+    spouseName: joi_1.default.string().optional().allow(null),
+    spouseDob: joi_1.default.date().optional().allow(null),
+    spouseEmail: joi_1.default.string().optional().allow(null),
+    childName1: joi_1.default.string().optional().allow(null),
+    childDob1: joi_1.default.string().optional().allow(null),
+    childName2: joi_1.default.string().optional().allow(null),
+    childDob2: joi_1.default.string().optional().allow(null),
+    personal1Name: joi_1.default.string().optional().allow(null),
+    relation1: joi_1.default.string().optional().allow(null),
+    p1Contact: joi_1.default.string().optional().allow(null),
+    address1: joi_1.default.string().optional().allow(null),
+    personal2Name: joi_1.default.string().optional().allow(null),
+    relation2: joi_1.default.string().optional().allow(null),
+    p2Contact: joi_1.default.string().optional().allow(null),
+    address2: joi_1.default.string().optional().allow(null),
+    bankName: joi_1.default.string().optional().allow(null),
+    accountHolderName: joi_1.default.string().optional().allow(null),
+    accountNumber: joi_1.default.string().optional().allow(null),
+    bankIfscCode: joi_1.default.string().optional().allow(null),
+    accountType: joi_1.default.string().optional().allow(null),
+    bankAccountBranch: joi_1.default.string().optional().allow(null),
+    photo: joi_1.default.string().optional().allow(null),
+    joiningDate: joi_1.default.date().optional(),
+    yearsOfExperience: joi_1.default.number().optional(),
+    skills: joi_1.default.string().optional(),
+    user: joi_1.default.any()
+});
